@@ -16,7 +16,7 @@ Created navbar. I decided to add this straight to the layout so it would be on e
 
 ---
 
-09/02 3pm
+09/02 2pm
 
 Started working on form on new post page. This is pretty easy, just like the one I made for last week's assignment pretty much.
 
@@ -29,6 +29,16 @@ I am dumb, it needed to be server side rendering. All is fine now.
 After another slight issue where I forgot to add $3 to the formsubmit, the database is now connected and properly receiving information from the client.
 
 I currently have an upload section for images, which I will probably try to figure out later if I have the time to do so.
+
+---
+
+09/02 5pm
+
+I've sucessfully setup the posts page similar to how we setup things earlier this week. I've yet to start on the individual pages, but I have just noticed that I forgot the like count. Just gonna sneak that into the database. I'm also going to update the formsubmit because I know it doesn't like when it starts as 'null'.
+
+It's definitely early, but I'm also working on the edit page. Everything was pretty easy to add, just add the post columns into the placeholders, all I need to figure out now is how to get the ID across to the updateForm file.
+
+Taking a break from that I've started working on the like button. I'm attempting to do it in a similar way to how I did my assignment 7. However, there seems to be an issue with server side and client side stuff, so I'm just experimenting with a few different things.
 
 ---
 
@@ -47,3 +57,5 @@ Stretch Goals
 🏹 Implement a select input (or similar mechanism) that allows users to categorise posts during creation, storing them in their own table in the database. Ensure appropriate routing for categories, with endpoints such as /categories and /categories/:id to enable users to browse and interact with posts by category.
 🏹 Create an edit functionality accessible via /posts/:id/edit, which pre-fills a form for post data. Create a working PUT route to update the post in the database.
 🏹 Develop an edit comment feature accessible via /posts/:id/comments/:id/edit, which pre-fills a form for comment data. Create a working PUT route to update the comment in the database.
+
+Completed Stretch Goals

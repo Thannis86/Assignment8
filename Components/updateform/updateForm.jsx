@@ -2,15 +2,14 @@
 
 import { db } from "../dbConnection";
 
-export default async function formSubmit(formvalues) {
+export default async function updateForm(formvalues) {
   db.query(
-    `INSERT INTO posts(name, content, category, likes)
-        VALUES($1, $2, $3, $4)`,
+    `UPDATE posts(name, content, category, likes) 
+        VALUES($1, $2, $3) WHERE id = 1`,
     [
       formvalues.get("name"),
       formvalues.get("content"),
       formvalues.get("category"),
-      0,
     ]
   );
 }
