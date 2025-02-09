@@ -1,6 +1,7 @@
 "use server";
 
 import { db } from "../dbConnection";
+import { redirect } from "next/navigation";
 
 export default async function formSubmit(formvalues) {
   db.query(
@@ -13,4 +14,5 @@ export default async function formSubmit(formvalues) {
       0,
     ]
   );
+  redirect("/posts");
 }
