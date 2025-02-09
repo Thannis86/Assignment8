@@ -42,6 +42,14 @@ Taking a break from that I've started working on the like button. I'm attempting
 
 ---
 
+09/02 7pm
+
+For my like button I was intending to use it to figure out other aspects of the website, mostly the edit and the delete functions. I kept searching for an elegant solution, including using an arrow function in the onclick. Throughout my google searches I saw a dozen different options and none of them seemed to work. I did have an idea earlier to shove the button into a form, but the idea is ugly and I was hoping to avoid it. But currently, I have few other options.
+
+PLEASE LET ME KNOW IF THERE IS A NEATER WAY TO HAVE DONE THIS
+
+---
+
 Requirements
 
 🎯 Display all posts on the page, with an option to sort them in ascending or descending order.

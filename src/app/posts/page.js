@@ -4,6 +4,7 @@ import likePosts from "../../../Components/likeposts/likePosts";
 
 export default async function postsPage() {
   "use client";
+
   const query = await db.query(`SELECT * FROM posts`);
   const wrangledData = query.rows;
   return (
@@ -15,9 +16,10 @@ export default async function postsPage() {
           <p className="postsContent">{posts.content}</p>
           <p>Likes: {posts.likes}</p>
           <div className="postsButtons">
-            <button id={posts.id} onClick={likePosts}>
-              Like
-            </button>
+            <form action={likePosts}>
+              <input type="hidden" name="id" value={posts.id} />
+              <button type="submit">Like</button>
+            </form>
             <button>Delete</button>
             <button>Edit</button>
           </div>
