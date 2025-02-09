@@ -5,12 +5,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  font-family: atma;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #662946;
+    --foreground: #cc528d;
+    --darkBackground: #421b2e;
   }
 }
 
@@ -18,4 +20,15 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 6fr 1fr 1fr;
+  grid-template-rows: 100px 200px 300px 200px;
+}
+
+#postForm {
+  display: flex;
+  align-items: start;
+  justify-self: center;
+  margin: 2%;
+  grid-area: 2 / 3 / 4 / 4;
 }
