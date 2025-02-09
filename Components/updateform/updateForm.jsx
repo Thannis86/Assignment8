@@ -4,8 +4,8 @@ import { db } from "../dbConnection";
 
 export default async function updateForm(formvalues) {
   db.query(
-    `UPDATE posts SET (name, content, category, likes) 
-        VALUES($1, $2, $3) WHERE id = 1`,
+    `UPDATE posts SET name = $1, content = $2, category = $3 
+    WHERE id = 1`,
     [
       formvalues.get("name"),
       formvalues.get("content"),

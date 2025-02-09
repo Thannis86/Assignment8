@@ -16,12 +16,14 @@ export default async function editPage({ params }) {
           placeholder={wrangledPosts.name}
           name="name"
           id="name"
+          value={wrangledPosts.name || "Default Content"}
         ></input>
         <input
           type="text"
           placeholder={wrangledPosts.content}
           name="content"
           id="content"
+          value={wrangledPosts.content || "Default Content"}
         ></input>
         <select name="category" id="category">
           <option value={wrangledPosts.category}>

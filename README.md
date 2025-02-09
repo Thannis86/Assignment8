@@ -50,20 +50,35 @@ PLEASE LET ME KNOW IF THERE IS A NEATER WAY TO HAVE DONE THIS
 
 ---
 
+09/02 9pm
+
+This update was relatively easy and my biggest difficulty came from the posts. When I had more than 1, I realised I had setup the divs wrap and the posts were overlapping. It took me a moment to figure out why. Essentially, I didn't have a div around the map, so when I was using grid area on the div inside the map, it would individually add every mapped element to the grid, so they would overlap. To combat this I just added a div around the map, then used that for the grid area.
+
+I also worked on the edit form section. This part was quite easy, the only real difficulty came from the actual submission. If you didn't fill in all the boxes, it would put some of them as null. For the dropdown box it was an easy fix, but for the text boxes, not so much. I know that I can't add just a value to it normally because I tried that and it crashed. After some research however, I found I could add a default value that would automatically fill in the inputs.
+
+Lastly I added the delete button function. This was pretty easy as it was a copy and paste of the like function that I struggled with earlier, just changing the SQL instead.
+
+Second lastly, I adjusted the edit button to a Link directing to the edit for that post page.
+
+---
+
 Requirements
 
 🎯 Display all posts on the page, with an option to sort them in ascending or descending order.
 🎯 Create a SQL schema for a posts table and a comments table, with the comments being connected to the posts table with a foreign key.
 Please submit your database schema, as is mentioned in the submission instructions.
-🎯 Create a delete button on posts that allows users to delete the post from the database.
+
 🎯 Create a form which saves comments to a dedicated comments table, with the comments being connected to the posts table with a foreign key.
 🎯 Allow users to comment on individual posts in their dynamic routes. Comments should be associated with posts, and have a dynamic route (e.g. /posts/:postid).
+
+Completed requirements
+🎯 Create a delete button on posts that allows users to delete the post from the database.
 🎯 Add a redirect when a user creates a post to redirect them to the posts page.
 
 Stretch Goals
 
 🏹 Implement a select input (or similar mechanism) that allows users to categorise posts during creation, storing them in their own table in the database. Ensure appropriate routing for categories, with endpoints such as /categories and /categories/:id to enable users to browse and interact with posts by category.
-🏹 Create an edit functionality accessible via /posts/:id/edit, which pre-fills a form for post data. Create a working PUT route to update the post in the database.
 🏹 Develop an edit comment feature accessible via /posts/:id/comments/:id/edit, which pre-fills a form for comment data. Create a working PUT route to update the comment in the database.
 
 Completed Stretch Goals
+🏹 Create an edit functionality accessible via /posts/:id/edit, which pre-fills a form for post data. Create a working PUT route to update the post in the database.
