@@ -67,6 +67,12 @@ body {
   display: none;
 }
 
+#sortPosts {
+  display: flex;
+  flex-direction: column;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
 /* Nav Bar Stuff */
 
 #navDiv {
