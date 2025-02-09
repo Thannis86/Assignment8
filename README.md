@@ -10,25 +10,25 @@ Added wireframe and database plan
 
 ---
 
-07/02 Lunch
+09/02 1pm
 
 Created navbar. I decided to add this straight to the layout so it would be on every page
 
+---
 
+09/02 3pm
 
+Started working on form on new post page. This is pretty easy, just like the one I made for last week's assignment pretty much.
 
+I'm trying to separate the on submit function to a different file to keep it clean. The initial issue I had was that it wasn't rendering client side and I forgot I had to set it to do that, which I now have. Now I'm getting a weird error about PG (posted in discord).
 
+I have tried moving the submit function directly to the form file, but it's now coming up with the error about it needing to be client side again.
 
+I am dumb, it needed to be server side rendering. All is fine now.
 
+After another slight issue where I forgot to add $3 to the formsubmit, the database is now connected and properly receiving information from the client.
 
-
-
-
-
-
-
-
-
+I currently have an upload section for images, which I will probably try to figure out later if I have the time to do so.
 
 ---
 

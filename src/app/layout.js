@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono, Atma } from "next/font/google";
 import "./globals.css";
 
-import Navbar from "../../Components/navbar";
+import Navbar from "../../Components/navbar/navbar";
 
 const atmaSans = Atma({
   weight: "300",

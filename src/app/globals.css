@@ -31,4 +31,5 @@ body {
   justify-self: center;
   margin: 2%;
   grid-area: 2 / 3 / 4 / 4;
+  flex-direction: column;
 }
