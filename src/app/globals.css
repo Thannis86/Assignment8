@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+nextjs-portal {
+  display: none;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #cc528d;
+  --foreground: #662946;
+  --darkForeground: #421b2e;
+  --darkBackground: #8c3861;
   font-family: atma;
 }
 
@@ -12,6 +18,7 @@
   :root {
     --background: #662946;
     --foreground: #cc528d;
+    --darkForeground: #8c3861;
     --darkBackground: #421b2e;
   }
 }
@@ -31,4 +38,56 @@ body {
   justify-self: center;
   margin: 2%;
   grid-area: 2 / 3 / 4 / 4;
+  flex-direction: column;
 }
+
+.posts {
+  display: flex;
+  align-self: start;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2%;
+  border: solid 1px var(--darkBackground);
+  height: 20%;
+  width: 40%;
+  grid-area: 2 / 3 / 4 / 4;
+}
+
+.postsButtons {
+  display: flex;
+  justify-self: space-between;
+}
+
+.formID {
+  display: none;
+}
+
+/* Nav Bar Stuff */
+
+#navDiv {
+  display: grid;
+  grid-area: 1 / 1 / 2 / 6;
+  grid-template-columns: 1fr 1fr 6fr 1fr 1fr;
+  background-color: var(--darkBackground);
+}
+
+#navBarLinks {
+  display: flex;
+  grid-area: 1 / 3 / 2 / 4;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navBarLinks {
+  padding: 10px;
+  font-size: xx-large;
+}
+
+.navBarLinks:hover {
+  scale: 1.05;
+  color: var(--darkForeground);
+}
+
+/* End Nav Bar Stuff */

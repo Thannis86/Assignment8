@@ -1,25 +1,32 @@
-import formSubmit from "../../../Components/formsubmit/formsubmit";
+import { db } from "../../../../../Components/dbConnection";
+import updateForm from "../../../../../Components/updateform/updateForm";
 
-export default function newPost() {
-  "use client";
-
+export default async function editPage({ params }) {
+  const postParams = await params;
+  const post = await db.query(`SELECT * FROM posts WHERE id =$1`, [
+    postParams.id,
+  ]);
+  const wrangledPosts = post.rows[0];
+  console.log(wrangledPosts);
   return (
     <>
-      <form id="postForm" action={formSubmit}>
+      <form id="postForm" action={updateForm}>
         <input
           type="text"
-          placeholder="Your Name"
+          placeholder={wrangledPosts.name}
           name="name"
           id="name"
         ></input>
         <input
           type="text"
-          placeholder="Your Post"
+          placeholder={wrangledPosts.content}
           name="content"
           id="content"
         ></input>
         <select name="category" id="category">
-          <option value={"null"}>Category</option>
+          <option value={wrangledPosts.category}>
+            {wrangledPosts.category}
+          </option>
           <option value={"Image"}>Image</option>
           <option value={"Joke"}>Joke</option>
           <option value={"Blog"}>Blog</option>
