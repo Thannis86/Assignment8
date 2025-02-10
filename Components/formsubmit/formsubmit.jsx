@@ -14,5 +14,6 @@ export default async function formSubmit(formvalues) {
       0,
     ]
   );
+
   redirect("/posts");
 }

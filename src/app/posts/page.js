@@ -21,31 +21,49 @@ export default async function postsPage({ searchParams }) {
   //
   return (
     <>
-      <h1 id="postsTitle">Posts</h1>
       <div id="posts">
         {wrangledData.map((posts) => (
           <div key={posts.id} className="posts">
-            <p className="postsName">{posts.name}</p>
-            <p className="postsContent">{posts.content}</p>
-            <p>Likes: {posts.likes}</p>
-            <div className="postsButtons">
+            <p className="Posts">{posts.name}</p>
+            <p className="Posts">{posts.content}</p>
+            <p className="Posts">Likes: {posts.likes}</p>
+            <div id="postsButtons">
               <form action={likePosts}>
                 <input type="hidden" name="id" value={posts.id} />
-                <button type="submit">Like</button>
+                <button type="submit" className="postsButtons">
+                  Like
+                </button>
               </form>
               <form action={deletePost}>
                 <input type="hidden" name="id" value={posts.id} />
-                <button type="submit">delete</button>
+                <button type="submit" className="postsButtons">
+                  Delete
+                </button>
               </form>
-              <Link href={`/posts/${posts.id}/edit`}>Edit</Link>
-              <Link href={`/posts/${posts.id}/comment`}>Comment</Link>
+              <Link href={`/posts/${posts.id}`} className="postsButtons">
+                View Post
+              </Link>
+              <Link href={`/posts/${posts.id}/edit`} className="postsButtons">
+                Edit
+              </Link>
+              <Link
+                href={`/posts/${posts.id}/comments`}
+                className="postsButtons"
+              >
+                Comment
+              </Link>
             </div>
           </div>
         ))}
       </div>
       <div id="sortPosts">
-        <Link href={`/posts?sort=asc`}>New-Old</Link>
-        <Link href={`/posts?sort=desc`}>Old-New</Link>
+        <p id="sortHead">Sort Posts By:</p>
+        <Link id="sortAsc" className="sort" href={`/posts?sort=desc`}>
+          New-Old
+        </Link>
+        <Link id="sortDesc" className="sort" href={`/posts?sort=asc`}>
+          Old-New
+        </Link>
       </div>
     </>
   );
