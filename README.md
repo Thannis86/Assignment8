@@ -70,21 +70,43 @@ I also started working on comments, but was unfortunately unable to get this fin
 
 ---
 
+This push will be my midnight rantings push where things have just sort of happened and I've not been keeping great track of it because I started at midnight and it's now 1:30am.
+
+In this update, I finished my comments. I struggled with joining the comments to the posts and resorted to recreating the comments table to get them properly linked. Still not sure what the exact purpose is, but it's linked. Prior to that, I created the comments form and included a section on it to also add the post ID to the comments table. That was a little weird and there were a lot of errors, but it was mostly from my own missing of bits.
+
+Now I've moved onto recreating the individual posts page and have setup a query to get comments based on the post page id. It's all come through fine, I just need to pretty it up at some point.
+
+I'm getting some sleep but not going to push this yet as I'm waiting to see if I will get an extention. If I do, I will also add a like button to my comments and an edit feature. Depending on the time I get, I may also go for the catergory stretch goal too.
+
+---
+
+10/02 8pm
+
+This update is basically cleaning the UI. There's not much new to it, just sorting through the CSS and better showing things and to generally look better and be better for the user experience.
+
+I also added the edit comments feature. This was basically a copy and post of the edit post function, just shifting a few things around. The only problem I had was with the routes and next not liking me putting an [id] inside another even with comments seperating it. So I created a new route in the main root for this and directed the link to edit the comment to that.
+
+I did setup vaguely to categorise the posts, however, including class today I've spent 8 hours staring at this screen with 10 hours staring yesterday, so I'm happy to call it a day at 2/3 stretch goals.
+
+Vercel still hasn't got back to me on creating an account, but as soon as it works, I'll add the link here.
+
+---
+
 Requirements
-🎯 Create a SQL schema for a posts table and a comments table, with the comments being connected to the posts table with a foreign key.
-Please submit your database schema, as is mentioned in the submission instructions.
-🎯 Create a form which saves comments to a dedicated comments table, with the comments being connected to the posts table with a foreign key.
-🎯 Allow users to comment on individual posts in their dynamic routes. Comments should be associated with posts, and have a dynamic route (e.g. /posts/:postid).
 
 Completed requirements
 🎯 Display all posts on the page, with an option to sort them in ascending or descending order.
 🎯 Create a delete button on posts that allows users to delete the post from the database.
 🎯 Add a redirect when a user creates a post to redirect them to the posts page.
+🎯 Create a SQL schema for a posts table and a comments table, with the comments being connected to the posts table with a foreign key.
+Please submit your database schema, as is mentioned in the submission instructions.
+🎯 Create a form which saves comments to a dedicated comments table, with the comments being connected to the posts table with a foreign key.
+🎯 Allow users to comment on individual posts in their dynamic routes. Comments should be associated with posts, and have a dynamic route (e.g. /posts/:postid).
 
 Stretch Goals
 
 🏹 Implement a select input (or similar mechanism) that allows users to categorise posts during creation, storing them in their own table in the database. Ensure appropriate routing for categories, with endpoints such as /categories and /categories/:id to enable users to browse and interact with posts by category.
-🏹 Develop an edit comment feature accessible via /posts/:id/comments/:id/edit, which pre-fills a form for comment data. Create a working PUT route to update the comment in the database.
 
 Completed Stretch Goals
 🏹 Create an edit functionality accessible via /posts/:id/edit, which pre-fills a form for post data. Create a working PUT route to update the post in the database.
+🏹 Develop an edit comment feature accessible via /posts/:id/comments/:id/edit, which pre-fills a form for comment data. Create a working PUT route to update the comment in the database.

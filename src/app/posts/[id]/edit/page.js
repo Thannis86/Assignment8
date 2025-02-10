@@ -11,6 +11,7 @@ export default async function editPage({ params }) {
   return (
     <>
       <form id="postForm" action={updateForm}>
+        <input type="hidden" name="id" value={wrangledPosts.id}></input>
         <input
           type="text"
           placeholder={wrangledPosts.name}
@@ -35,7 +36,6 @@ export default async function editPage({ params }) {
           <option value={"Question"}>Question</option>
           <option value={"Information"}>Information</option>
         </select>
-        <input type="file"></input>
         <button type="submit">Submit</button>
       </form>
     </>
