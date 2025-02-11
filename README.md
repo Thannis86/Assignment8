@@ -92,6 +92,14 @@ Vercel still hasn't got back to me on creating an account, but as soon as it wor
 
 ---
 
+11/02 8am
+
+Vercel link
+
+https://assignment8-sand.vercel.app
+
+---
+
 Requirements
 
 Completed requirements
